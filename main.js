@@ -12,22 +12,19 @@
 
 // // for (const item of arr2) {
 // //     console.log(item);
-    
+
 // // }
 // // // for of для массивов
 // // // for in для объектов
 // // console.log(arr1, arr2);
 
-
-
-
 // function checkPalindrome(palindrome) {
 //     palindrome = palindrome.toLowerCase();
-    
+
 //     // while (palindrome.indexOf(' ') != -1){
 //     //     palindrome = palindrome.replace(' ', '');
 //     // }
-//     // или 
+//     // или
 //     palindrome = palindrome.replaceAll(' ', '');
 
 //     palindrome = palindrome.split('');
@@ -56,7 +53,6 @@
 // console.log(profile2);
 // console.log(profile == profile2);
 
-
 // 22.08.2024
 
 // let value1 = 15; // Number
@@ -72,7 +68,7 @@
 // for (let i = 0; i < 3; i++) {
 //     for (let j = 0; j < 4; j++) {
 //         console.log('Hello World!'[i + j]);
-        
+
 //     }
 // }
 //во внешнем и внутреннем цикле должны быть разные переменные, в основном применяются i, j, k
@@ -81,19 +77,17 @@
 
 // for (let i = 0; i < arr.length; i++) {
 //     console.log(arr[i]);
-    
+
 // }
 // // матрица
-// let arr2 = [[1, 2, 3], [4, 5, 6, 4], [7, 8, 9], [10, 11, 12]]; 
+// let arr2 = [[1, 2, 3], [4, 5, 6, 4], [7, 8, 9], [10, 11, 12]];
 // console.log(arr2);
 // console.log(arr2[0][1]);
-
-
 
 // for (let i = 0; i < arr2.length; i++) {
 //     for (let j = 0; j < arr2[i].length; j++) {
 //         console.log(arr2[i][j]);
-        
+
 //     }
 // }
 
@@ -117,4 +111,97 @@
 
 //Сделать игру камень, ножницы, бумага
 
-console.log(Math.floor(Math.random() * 3));// рандом выведет цифры до 3(0,1,2), Math.floor округляет в меньшую сторону
+// console.log(Math.floor(Math.random() * 3)); // рандом выведет цифры до 3(0,1,2), Math.floor округляет в меньшую сторону
+
+
+
+    //  ФУНКЦИИ 02.09.2024
+
+// function verbNoun() {
+//     console.log(15);
+// }
+// // verbNoun();
+// console.log(verbNoun);
+// console.log(verbNoun());
+
+// let myFunc = verbNoun;
+// myFunc()
+
+
+
+
+// function verbNoun(func) {
+//     func();
+// }
+
+// function print() {
+//     console.log('hello world!');
+// }
+
+// verbNoun(print);
+
+// let myFunc = new Function('let b = 13; console.log(b); return 777;');
+// console.log(myFunc);
+// myFunc();
+// console.log(myFunc())
+
+// eval('5 + 50 * 10');
+// console.log(eval('5 + 50 * 10'));
+
+
+
+
+
+// function sum(a, b, c) {
+//     return a + b + c;
+    
+// }
+
+// console.log(sum(3, 11, 17));
+
+
+
+// let newSum = function sum(a, b, c) {
+//     return a + b + c;
+// };
+// console.log(newSum(1, 1, 1));
+// console.log(sum(1, 1, 1,));
+
+
+
+// for (let i = 0, i < 5; i++){
+//     function print() {
+//         console.log(i);
+//     }
+//     print();
+// }
+
+
+
+// {
+//     let value = 110;
+// }
+// console.log(value);
+ 
+
+
+// {
+//     function getNumber() {
+//         return 100;
+//     }
+
+//     console.log(getNumber());
+// }
+
+// console.log(getNumber());
+
+
+
+let sum = () => 5 + 5;
+
+console.log(() => 5 + 5);
+console.log(sum());
+console.log(sum);
+
+console.log((() => 5 + 5)());
+console.log(((a, b) => a + b)(10, 20));
