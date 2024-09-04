@@ -197,11 +197,139 @@
 
 
 
-let sum = () => 5 + 5;
+// let sum = () => 5 + 5;
 
-console.log(() => 5 + 5);
-console.log(sum());
-console.log(sum);
+// console.log(() => 5 + 5);
+// console.log(sum());
+// console.log(sum);
 
-console.log((() => 5 + 5)());
-console.log(((a, b) => a + b)(10, 20));
+// console.log((() => 5 + 5)());
+// console.log(((a, b) => a + b)(10, 20));
+
+
+
+
+// 04.09.2024
+
+// Сравнить строки одинакового размера и найти отличия, может быть и пустая строка
+// '', '' => 0 отличий
+// 'Hello World', 'Hello world' => 1 отличий
+
+        // Первый вариант
+// function diffStrings(str1, str2) {
+//     if (str1 == str2) {
+//         return 0;
+//     }
+    
+//     let count = 0;
+
+//     for (let i = 0; i < str1.length; i++) {
+//         if (str1[i] != str2[i]){
+//             count++;
+//         }   
+//     }
+//     return count;
+// }
+
+// console.log(diffStrings('I like JS', 'I mike BS'));
+// console.log(diffStrings('A', 'B'));
+// console.log(diffStrings('', ''));
+
+
+
+        // Второй вариант (что-то не получилось)
+// function diffStrings(str1, str2) {
+//     if (str1 == str2) {
+//         return 0;
+//     }
+    
+//     let count = 0;
+
+//     let str1Parity = str1.length % 2 == 0 ? str1.length / 2 : Math.trunc(str1.length / 2 + 1);
+//     let str2Parity = str2.length % 2 == 0 ? str2.length / 2 : Math.trunc(str2.length / 2 + 1);
+
+//     if (str1.substring(0, str1Parity) != str2.substring(0, str2Parity)) {
+//         for (let i = 0, size = str1Parity; i < size; i++) {
+//             if (str1[i] != str2[i]){
+//             count++;
+//             }   
+//         }
+//         return count;
+//     }
+//     if (str1.substring(str1Parity) != str2.substring(str2Parity)) {
+//         for (let i = str1Parity; i < str1.length; i++) {
+//             if (str1[i] != str2[i]){
+//             count++;
+//             }   
+//         }
+//         return count;
+//     }
+// }
+
+// console.log(diffStrings('I like JS', 'I mike BS'));
+// console.log(diffStrings('A', 'B'));
+// console.log(diffStrings('', ''));
+
+
+
+
+     // Третий вариант
+// function diffStrings(str1, str2) {
+//     if (str1 == str2) {
+//         return 0;
+//     }
+    
+//     let count = 0;
+
+//     for (let i = 0; i < str1.length; i++) {
+//         if (str1.charCodeAt(i) != str2.charCodeAt(i)){
+//             count++;
+//         }   
+//     }
+//     return count;
+// }
+// console.log('Hello World!'.charAt(0));
+// console.log('Hello World!'.charCodeAt(0));
+
+// console.log(diffStrings('I like JS', 'I mike BS'));
+// console.log(diffStrings('A', 'B'));
+// console.log(diffStrings('', ''));
+
+
+           // Массивы
+// let arr = [1, 2, 3, 4, 5];
+// console.log(arr);
+
+// arr = [];
+// console.log(arr);
+
+// arr = new Array();
+// console.log(arr);
+
+// arr = new Array(1, 2, 3, 4, 5);
+// console.log(arr);
+
+// arr = new Array(10);
+// console.log(arr);
+
+
+
+
+// let arr = [];
+// arr[0] = 10;
+// arr[1] = 777;
+// arr.push(600);
+// console.log(arr);
+
+// arr.pop();
+// console.log(arr);
+
+
+// arr.sort((a, b) => a - b);
+// console.log(arr);
+
+let arr = [1, 2, 4]
+arr = arr.filter((value, i, arr) => arr[i] ** 2);
+console.log(arr);
+
+
