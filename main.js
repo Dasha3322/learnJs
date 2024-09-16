@@ -328,8 +328,93 @@
 // arr.sort((a, b) => a - b);
 // console.log(arr);
 
-let arr = [1, 2, 4]
-arr = arr.filter((value, i, arr) => arr[i] ** 2);
-console.log(arr);
+// let arr = [1, 2, 4]
+// arr = arr.filter(function(value) { console.log(value ** 2)});
+// console.log(arr);
 
+
+
+
+//       16/09/2024
+
+// let arr = [1, -10, 2, 5];
+
+
+// // arr.fill(0, 0, 2);
+// // console.log(arr);
+
+// arr = [1, 2, 3, [4, 5, 6, [7, 8, 9]]];
+// arr = arr.flat(Infinity);
+// // console.log(arr);
+
+
+// console.log(arr.every((v) => v == 9));
+
+// // arr = arr.filter((v) => v % 2 == 0);
+// // arr = arr.filter((v, i, a) => a[i] == a[i + 1]);
+// // console.log(arr);
+
+// // arr.forEach((v) => (v = v ** 2));
+// // console.log(arr);
+// // arr.forEach((v, i, a) => (a[i] = a[i] ** 2));
+// // console.log(arr);
+
+// // arr.map((v, i, a) => (a[i] = v ** 2));
+// // console.log(arr);
+
+// console.log(arr.reduce((result, v) => (result += v)));
+// console.log(arr);
+
+// arr = arr.concat([1, 2, 3, 4, 5, 6]); //добавляет элементы в конец массива
+// console.log(arr);
+
+// arr.push([0, 0, 0, 0]);
+// console.log(arr);
+
+// console.log(arr.some((v) => v == 0));
+
+
+//    ОБЪЕКТЫ
+// let book = {
+//         name: 'War and Peace',
+//         author: 'Leo Tolstoy',
+//         year: 1869,
+// };
+
+// console.log(Object.getOwnPropertyNames(book))
+
+
+function Person (name, age, phoneNumber) {
+
+        return {
+                name: name,
+                age: age,
+                phoneNumber: phoneNumber,
+
+                showInfo() {
+                        console.log(name, age, phoneNumber);
+                        
+                },
+        };
+}
+
+let person2 = Person('Oleg', 10, null);
+console.log(person2);
+person2.showInfo()
+
+
+function Worker(name, age, phoneNumber, money) {
+        this.name = name;
+        this.age = age;
+        this.phoneNumber = phoneNumber;
+        this.money = money;
+        this.type = 'shape';
+
+        this.showInfo = () => console.log(this.name, this.age, this.phoneNumber, this.money);
+}
+
+let worker1 = new Worker('Ivan', 10, null, 10);
+worker1.name = 'Вася';
+console.log(worker1);
+worker1.showInfo();
 
